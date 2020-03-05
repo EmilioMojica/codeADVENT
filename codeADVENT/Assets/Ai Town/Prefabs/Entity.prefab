@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 106413611453165240}
   - component: {fileID: 604491819480113785}
   - component: {fileID: 4062817739803846127}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Morale Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4870156492072334440}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InternalClock Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9141173637060157351}
   - component: {fileID: 3292482811645451165}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Statbars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,22 +207,22 @@ MonoBehaviour:
   Entity: {fileID: 0}
   healthbar: {fileID: 0}
   healthFill: {fileID: 0}
-  healthBarYOffset: 1
+  healthBarYOffset: 2
   manabar: {fileID: 0}
   manaFill: {fileID: 0}
-  manaBarYOffset: 1.2
+  manaBarYOffset: 1.8
   staminabar: {fileID: 0}
   staminaFill: {fileID: 0}
-  staminaBarYOffset: 1.4
+  staminaBarYOffset: 1.6
   hungerbar: {fileID: 0}
   hungerFill: {fileID: 0}
-  hungerBarYOffset: 1.6
+  hungerBarYOffset: 1.4
   moralebar: {fileID: 0}
   moraleFill: {fileID: 0}
-  moraleBarYOffset: 1.8
+  moraleBarYOffset: 1.2
   internalclockbar: {fileID: 0}
   internalclockFill: {fileID: 0}
-  internalclockBarYOffset: 2
+  internalclockBarYOffset: 1
 --- !u!1 &1290012542023115593
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 5519182332140742095}
   - component: {fileID: 8420817897523113601}
   - component: {fileID: 2310708035017089895}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InternalClock Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,10 @@ GameObject:
   - component: {fileID: 1333380295988624149}
   - component: {fileID: 1333380295988624146}
   - component: {fileID: 1333380295988624147}
-  m_Layer: 8
+  - component: {fileID: 2365094639980174541}
+  - component: {fileID: 1433564909914732614}
+  - component: {fileID: -613473807458571460}
+  m_Layer: 0
   m_Name: Entity
   m_TagString: Entity
   m_Icon: {fileID: 0}
@@ -401,10 +404,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31d9e55b76eaef54681a7c98b520b043, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -467,7 +471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ce6bc70ff371418182fb767b0eb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grace: 0
+  TimePassing: {fileID: 0}
   ID: 0
+  Entity: {fileID: 0}
   Good: 0
   Neutral1: 0
   Evil: 0
@@ -488,6 +495,64 @@ MonoBehaviour:
   Full: 0
   Morale: 0
   maxMorale: 0
+--- !u!195 &2365094639980174541
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333380295988624144}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1433564909914732614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333380295988624144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b653966d28a8d05449c5e6c66462365e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  self: {fileID: 0}
+  Sleep: {fileID: 0}
+  SleepCoord: {x: 0, y: 0, z: 0}
+  Food: {fileID: 0}
+  FoodCoord: {x: 0, y: 0, z: 0}
+  Interaction: {fileID: 0}
+  InteractionCoord: {x: 0, y: 0, z: 0}
+--- !u!114 &-613473807458571460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333380295988624144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e725551496358b74dba6e72048e528a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ContSelf: {fileID: 0}
+  ContselfRigidbody: {fileID: 0}
+  ContAgent: {fileID: 0}
+  CanJump: 0
 --- !u!1 &1333380296307021473
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +564,7 @@ GameObject:
   - component: {fileID: 1333380296307021472}
   - component: {fileID: 1333380296307021474}
   - component: {fileID: 1333380296307021475}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333380297036237613}
   - component: {fileID: 1333380297036237612}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333380297116433746}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +764,7 @@ GameObject:
   - component: {fileID: 1333380297593260419}
   - component: {fileID: 1333380297593260416}
   - component: {fileID: 1333380297593260420}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +881,7 @@ GameObject:
   - component: {fileID: 1333380297819226913}
   - component: {fileID: 1333380297819226915}
   - component: {fileID: 1333380297819226912}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Health Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2321481792067773682}
   - component: {fileID: 7454653938196089723}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stamina Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +1044,7 @@ GameObject:
   - component: {fileID: 5740531705229791225}
   - component: {fileID: 7111052589548698706}
   - component: {fileID: 7468321902346616121}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stamina Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1161,7 @@ GameObject:
   - component: {fileID: 144053890591517720}
   - component: {fileID: 4337704857874440032}
   - component: {fileID: 8490951790661931428}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hunger Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2287217046661011028}
   - component: {fileID: 9075956094361507237}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Mana Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6619524764066770886}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Morale Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1360,7 @@ GameObject:
   - component: {fileID: 16383124814687355}
   - component: {fileID: 8169249506858732131}
   - component: {fileID: 581199483840327828}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hunger Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1412,7 +1477,7 @@ GameObject:
   - component: {fileID: 1203666851903365776}
   - component: {fileID: 2428073777356307911}
   - component: {fileID: 6413460741024764226}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Morale Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8743823736021155807}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stamina Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1587,7 @@ GameObject:
   - component: {fileID: 8196108506566143208}
   - component: {fileID: 213892453772186799}
   - component: {fileID: 3309266661514285255}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InternalClock Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1661,7 @@ GameObject:
   - component: {fileID: 4335864773113418184}
   - component: {fileID: 5581350272342263139}
   - component: {fileID: 89311730096020789}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Mana Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2725113813339536689}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Mana Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1705,7 +1770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8264849223088675031}
   - component: {fileID: 3985465227976254899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Morale Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1792,7 +1857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3567143183594306748}
   - component: {fileID: 8854399257739166937}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hunger Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1880,7 +1945,7 @@ GameObject:
   - component: {fileID: 8815871139233400923}
   - component: {fileID: 5603053606420057618}
   - component: {fileID: 2657996232218521450}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +2022,7 @@ GameObject:
   - component: {fileID: 8089738641880915324}
   - component: {fileID: 750729998854453830}
   - component: {fileID: 275107846479247323}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Mana Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2523910738654512004}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hunger Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2110,7 +2175,7 @@ GameObject:
   - component: {fileID: 5752915775268253839}
   - component: {fileID: 4803705722421881346}
   - component: {fileID: 4246579441665335514}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2185,7 +2250,7 @@ GameObject:
   - component: {fileID: 4578986295932589679}
   - component: {fileID: 3924031986465104704}
   - component: {fileID: 4715569482761709018}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stamina Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2324,7 @@ GameObject:
   - component: {fileID: 6906596932516488793}
   - component: {fileID: 44205900710601160}
   - component: {fileID: 5103098593146171343}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2334,7 +2399,7 @@ GameObject:
   - component: {fileID: 5672056366636903711}
   - component: {fileID: 7741341532645556855}
   - component: {fileID: 4402449548495613027}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4982636663556752729}
   - component: {fileID: 4678670306442951190}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InternalClock Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2496,7 +2561,7 @@ GameObject:
   - component: {fileID: 683724581772695488}
   - component: {fileID: 193068309075875107}
   - component: {fileID: 5393519845277713077}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Backing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

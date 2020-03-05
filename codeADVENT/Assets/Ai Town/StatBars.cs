@@ -13,32 +13,32 @@ public class StatBars : MonoBehaviour
     [Header("Health")]
     public Transform healthbar;
     public Slider healthFill;
-    public float healthBarYOffset = 1f;
+    public float healthBarYOffset = 2f;
 
     [Header("Mana")]
     public Transform manabar;
     public Slider manaFill;
-    public float manaBarYOffset = 1.2f;
+    public float manaBarYOffset = 1.8f;
 
     [Header("Stamina")]
     public Transform staminabar;
     public Slider staminaFill;
-    public float staminaBarYOffset = 1.4f;
+    public float staminaBarYOffset = 1.6f;
 
     [Header("Hunger")]
     public Transform hungerbar;
     public Slider hungerFill;
-    public float hungerBarYOffset = 1.6f;
+    public float hungerBarYOffset = 1.4f;
 
     [Header("Morale")]
     public Transform moralebar;
     public Slider moraleFill;
-    public float moraleBarYOffset = 1.8f;
+    public float moraleBarYOffset = 1.2f;
 
     [Header("InternalClock")]
     public Transform internalclockbar;
     public Slider internalclockFill;
-    public float internalclockBarYOffset = 2f;
+    public float internalclockBarYOffset = 1f;
 
     float amount;
 
@@ -60,78 +60,78 @@ public class StatBars : MonoBehaviour
     {
         //HEALTH
         healthbar = GameObject.Find("Health Bar").transform;
-        healthbar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " Healthbar";
+        healthbar.name = "Entity" + Entity.GetComponent<Stats>().ID + " Healthbar";
         healthFill = GameObject.Find("Health Slider").GetComponent<Slider>();
-        healthFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " HealthFill";
+        healthFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " HealthFill";
 
         //MANA
         manabar = GameObject.Find("Mana Bar").transform;
-        manabar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " Manabar";
+        manabar.name = "Entity" + Entity.GetComponent<Stats>().ID + " Manabar";
         manaFill = GameObject.Find("Mana Slider").GetComponent<Slider>();
-        manaFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " ManaFill";
+        manaFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " ManaFill";
 
         //STAMINA
         staminabar = GameObject.Find("Stamina Bar").transform;
-        staminabar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " Staminabar";
+        staminabar.name = "Entity" + Entity.GetComponent<Stats>().ID + " Staminabar";
         staminaFill = GameObject.Find("Stamina Slider").GetComponent<Slider>();
-        staminaFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " StaminaFill";
+        staminaFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " StaminaFill";
 
         //HUNGER
         hungerbar = GameObject.Find("Hunger Bar").transform;
-        hungerbar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " Hungerbar";
+        hungerbar.name = "Entity" + Entity.GetComponent<Stats>().ID + " Hungerbar";
         hungerFill = GameObject.Find("Hunger Slider").GetComponent<Slider>();
-        hungerFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " HungerFill";
+        hungerFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " HungerFill";
 
         //MORALE
         moralebar = GameObject.Find("Morale Bar").transform;
-        moralebar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " Moralebar";
+        moralebar.name = "Entity" + Entity.GetComponent<Stats>().ID + " Moralebar";
         moraleFill = GameObject.Find("Morale Slider").GetComponent<Slider>();
-        moraleFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " MoraleFill";
+        moraleFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " MoraleFill";
 
         //INTERNAL CLOCK
         internalclockbar = GameObject.Find("InternalClock Bar").transform;
-        internalclockbar.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " InternalClockbar";
+        internalclockbar.name = "Entity" + Entity.GetComponent<Stats>().ID + " InternalClockbar";
         internalclockFill = GameObject.Find("InternalClock Slider").GetComponent<Slider>();
-        internalclockFill.name = "Entity" + Entity.GetComponent<NPCstats>().ID + " InternalClockFill";
+        internalclockFill.name = "Entity" + Entity.GetComponent<Stats>().ID + " InternalClockFill";
     }
 
     public void ChangeValues()
     {
         //HEALTH
-        Entity.GetComponent<NPCstats>().HP += amount;
-        Entity.GetComponent<NPCstats>().HP = Mathf.Clamp(Entity.GetComponent<NPCstats>().HP, 0, Entity.GetComponent<NPCstats>().maxHP);
+        Entity.GetComponent<Stats>().HP += amount;
+        Entity.GetComponent<Stats>().HP = Mathf.Clamp(Entity.GetComponent<Stats>().HP, 0, Entity.GetComponent<Stats>().maxHP);
 
-        healthFill.value = Entity.GetComponent<NPCstats>().HP / Entity.GetComponent<NPCstats>().maxHP;
+        healthFill.value = Entity.GetComponent<Stats>().HP / Entity.GetComponent<Stats>().maxHP;
 
         //MANA
-        Entity.GetComponent<NPCstats>().MP += amount;
-        Entity.GetComponent<NPCstats>().MP = Mathf.Clamp(Entity.GetComponent<NPCstats>().MP, 0, Entity.GetComponent<NPCstats>().maxMP);
+        Entity.GetComponent<Stats>().MP += amount;
+        Entity.GetComponent<Stats>().MP = Mathf.Clamp(Entity.GetComponent<Stats>().MP, 0, Entity.GetComponent<Stats>().maxMP);
 
-        manaFill.value = Entity.GetComponent<NPCstats>().MP / Entity.GetComponent<NPCstats>().maxMP;
+        manaFill.value = Entity.GetComponent<Stats>().MP / Entity.GetComponent<Stats>().maxMP;
 
         //STAMINA
-        Entity.GetComponent<NPCstats>().Stamina += amount;
-        Entity.GetComponent<NPCstats>().Stamina = Mathf.Clamp(Entity.GetComponent<NPCstats>().Stamina, 0, Entity.GetComponent<NPCstats>().maxStamina);
+        Entity.GetComponent<Stats>().Stamina += amount;
+        Entity.GetComponent<Stats>().Stamina = Mathf.Clamp(Entity.GetComponent<Stats>().Stamina, 0, Entity.GetComponent<Stats>().maxStamina);
 
-        staminaFill.value = Entity.GetComponent<NPCstats>().Stamina / Entity.GetComponent<NPCstats>().maxStamina;
+        staminaFill.value = Entity.GetComponent<Stats>().Stamina / Entity.GetComponent<Stats>().maxStamina;
 
         //HUNGER
-        Entity.GetComponent<NPCstats>().Hunger += amount;
-        Entity.GetComponent<NPCstats>().Hunger = Mathf.Clamp(Entity.GetComponent<NPCstats>().Hunger, 0, Entity.GetComponent<NPCstats>().Full);
+        Entity.GetComponent<Stats>().Hunger += amount;
+        Entity.GetComponent<Stats>().Hunger = Mathf.Clamp(Entity.GetComponent<Stats>().Hunger, 0, Entity.GetComponent<Stats>().Full);
 
-        hungerFill.value = Entity.GetComponent<NPCstats>().Hunger / Entity.GetComponent<NPCstats>().Full;
+        hungerFill.value = Entity.GetComponent<Stats>().Hunger / Entity.GetComponent<Stats>().Full;
 
         //MORALE
-        Entity.GetComponent<NPCstats>().Morale += amount;
-        Entity.GetComponent<NPCstats>().Morale = Mathf.Clamp(Entity.GetComponent<NPCstats>().Morale, 0, Entity.GetComponent<NPCstats>().maxMorale);
+        Entity.GetComponent<Stats>().Morale += amount;
+        Entity.GetComponent<Stats>().Morale = Mathf.Clamp(Entity.GetComponent<Stats>().Morale, 0, Entity.GetComponent<Stats>().maxMorale);
 
-        moraleFill.value = Entity.GetComponent<NPCstats>().Morale / Entity.GetComponent<NPCstats>().maxMorale;
+        moraleFill.value = Entity.GetComponent<Stats>().Morale / Entity.GetComponent<Stats>().maxMorale;
 
         //INTERNAL CLOCK
-        Entity.GetComponent<NPCstats>().InternalClock += amount;
-        Entity.GetComponent<NPCstats>().InternalClock = Mathf.Clamp(Entity.GetComponent<NPCstats>().InternalClock, 0, Entity.GetComponent<NPCstats>().Rested);
+        Entity.GetComponent<Stats>().InternalClock += amount;
+        Entity.GetComponent<Stats>().InternalClock = Mathf.Clamp(Entity.GetComponent<Stats>().InternalClock, 0, Entity.GetComponent<Stats>().Rested);
 
-        internalclockFill.value = Entity.GetComponent<NPCstats>().InternalClock / Entity.GetComponent<NPCstats>().Rested;
+        internalclockFill.value = Entity.GetComponent<Stats>().InternalClock / Entity.GetComponent<Stats>().Rested;
     }
 
     private void PositionBars()
