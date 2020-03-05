@@ -50,7 +50,7 @@ public class AIController : MonoBehaviour
         {
             ContAgent.Stop(true);
             Debug.Log("A jump is suppose to happen.");
-            ContselfRigidbody.AddForce(0, 400000000000, 0);
+            ContselfRigidbody.AddForce(0, 400, 0);
             Debug.Log("A jump should have been executed.");
         }
     }
