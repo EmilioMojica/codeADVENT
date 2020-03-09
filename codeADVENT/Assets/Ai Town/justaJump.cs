@@ -8,7 +8,8 @@ public class justaJump : MonoBehaviour
     [SerializeField] private Rigidbody thisRigidBody;
     [SerializeField] private Transform meeee;
     [SerializeField] private float standingY;
-    [SerializeField] private float NEWstandingY; 
+    [SerializeField] private float NEWstandingY;
+    [SerializeField] private bool JUMPA;
 
     // Start is called before the first frame update
     void Start()
@@ -21,22 +22,31 @@ public class justaJump : MonoBehaviour
     void Update()
     {
         standingY = meeee.transform.position.y;
+        JumpChk();
     }
 
     IEnumerator dodajumping()
     {
-        yield return new WaitForSeconds(5f);
-        NEWstandingY = standingY;
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(whereamI());
+    }
+    
+    IEnumerator whereamI()
+    {
+        yield return new WaitForSeconds(3f);
+        NEWstandingY = meeee.transform.position.y;
     }
 
-    void OnCollision(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (NEWstandingY == standingY)
+        StartCoroutine(dodajumping());
+    }
+
+    void JumpChk()
+    {
+        if (JUMPA == true)
         {
-            thisRigidBody.AddForce(new Vector3(0, 3f, 0), ForceMode.Impulse);
-            NEWstandingY = 0;
-            //thisRigidBody.AddForce(0, 3f, 0);
-            StartCoroutine(dodajumping());
+            thisRigidBody.AddForce(new Vector3(0, 1f, 0), ForceMode.Impulse);
         }
     }
 }
