@@ -27,14 +27,23 @@ public class justaJump : MonoBehaviour
 
     IEnumerator dodajumping()
     {
-        yield return new WaitForSeconds(3f);
-        StartCoroutine(whereamI());
+        yield return new WaitForSeconds(0.5f);
+        
+        if (NEWstandingY == standingY)
+        {
+            JUMPA = true;
+        }
+        else
+        {
+            StartCoroutine(whereamI());
+        }
     }
     
     IEnumerator whereamI()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         NEWstandingY = meeee.transform.position.y;
+        StartCoroutine(dodajumping());
     }
 
     void OnCollisionEnter(Collision collision)
@@ -46,7 +55,8 @@ public class justaJump : MonoBehaviour
     {
         if (JUMPA == true)
         {
-            thisRigidBody.AddForce(new Vector3(0, 1f, 0), ForceMode.Impulse);
+            thisRigidBody.AddForce(new Vector3(0, 3f, 0), ForceMode.Impulse);
+            JUMPA = false;
         }
     }
 }
