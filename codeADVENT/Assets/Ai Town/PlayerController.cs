@@ -7,13 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent AutoPathing;
     [SerializeField] private Transform Myself;
+    [SerializeField] private Rigidbody thisRigidBody;
     [SerializeField] public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
         AutoPathing = GetComponent<NavMeshAgent>();
-        Myself = GetComponent<Stats>().Entity;
+        Myself = GetComponent<Transform>();
+        thisRigidBody = GetComponent<Rigidbody>();
         AutoPathing.Stop(true);
     }
 
@@ -25,9 +27,9 @@ public class PlayerController : MonoBehaviour
 
     void MoveMe()
     {
-        float hor = Input.GetAxis("Horiztonal");
-        float ver = Input.GetAxis("Vertical");
-        Vector3 playerMovement = new Vector3(hor, 0f, ver) * speed * Time.deltaTime;
-        transform.Translate(playerMovement, Space.Self);
+        if (Input.GetKeyDown("w"))
+        {
+            thisRigidBody.AddForce(new Vector3(0, 0, 05));
+        }
     }
 }

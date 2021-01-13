@@ -14,8 +14,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Ai Town.meta
+    - Assets/Ai Town/AI Town.meta
+    - Assets/Ai Town/AI Town.unity
+    - Assets/Ai Town/AI Town.unity.meta
+    - Assets/Ai Town/AI Town/NavMesh.asset
+    - Assets/Ai Town/AI Town/NavMesh.asset.meta
+    - Assets/Ai Town/AI TownSettings.lighting
+    - Assets/Ai Town/AI TownSettings.lighting.meta
+    - Assets/Ai Town/AIController.cs
+    - Assets/Ai Town/AIController.cs.meta
+    - Assets/Ai Town/AINav.cs
+    - Assets/Ai Town/AINav.cs.meta
+    - Assets/Ai Town/Building Types.cs
+    - Assets/Ai Town/Building Types.cs.meta
+    - Assets/Ai Town/LookAtCam.cs
+    - Assets/Ai Town/LookAtCam.cs.meta
+    - Assets/Ai Town/Materials.meta
+    - Assets/Ai Town/Materials/Negative.meta
+    - Assets/Ai Town/Materials/Negative/Blue-.mat
+    - Assets/Ai Town/Materials/Negative/Blue-.mat.meta
+    - Assets/Ai Town/Materials/Negative/Green-.mat
+    - Assets/Ai Town/Materials/Negative/Green-.mat.meta
+    - Assets/Ai Town/Materials/Negative/Magenta-.mat
+    - Assets/Ai Town/Materials/Negative/Magenta-.mat.meta
+    - Assets/Ai Town/Materials/Negative/Orange-.mat
+    - Assets/Ai Town/Materials/Negative/Orange-.mat.meta
+    - Assets/Ai Town/Materials/Negative/Red-.mat
+    - Assets/Ai Town/Materials/Negative/Red-.mat.meta
+    - Assets/Ai Town/Materials/Negative/Yellow-.mat
+    - Assets/Ai Town/Materials/Negative/Yellow-.mat.meta
+    - Assets/Ai Town/Materials/Positive.meta
+    - Assets/Ai Town/Materials/Positive/Blue+.mat
+    - Assets/Ai Town/Materials/Positive/Blue+.mat.meta
+    - Assets/Ai Town/Materials/Positive/Green+.mat
+    - Assets/Ai Town/Materials/Positive/Green+.mat.meta
+    - Assets/Ai Town/Materials/Positive/Magenta+.mat
+    - Assets/Ai Town/Materials/Positive/Magenta+.mat.meta
+    - Assets/Ai Town/Materials/Positive/Orange+.mat
+    - Assets/Ai Town/Materials/Positive/Orange+.mat.meta
+    - Assets/Ai Town/Materials/Positive/Red+.mat
+    - Assets/Ai Town/Materials/Positive/Red+.mat.meta
+    - Assets/Ai Town/Materials/Positive/Yellow+.mat
+    - Assets/Ai Town/Materials/Positive/Yellow+.mat.meta
+    - Assets/Ai Town/PlayerController.cs
+    - Assets/Ai Town/PlayerController.cs.meta
+    - Assets/Ai Town/Prefabs.meta
+    - Assets/Ai Town/Prefabs/Entity.prefab
+    - Assets/Ai Town/Prefabs/Entity.prefab.meta
+    - Assets/Ai Town/Prefabs/Player.prefab
+    - Assets/Ai Town/Prefabs/Player.prefab.meta
+    - Assets/Ai Town/Prefabs/TimeTracking.prefab
+    - Assets/Ai Town/Prefabs/TimeTracking.prefab.meta
+    - Assets/Ai Town/Spawner.cs
+    - Assets/Ai Town/Spawner.cs.meta
+    - Assets/Ai Town/StatBars.cs
+    - Assets/Ai Town/StatBars.cs.meta
+    - Assets/Ai Town/Stats.cs
+    - Assets/Ai Town/Stats.cs.meta
+    - Assets/Ai Town/TimeTracking.cs
+    - Assets/Ai Town/TimeTracking.cs.meta
+    - Assets/Ai Town/VolumeZone.cs
+    - Assets/Ai Town/VolumeZone.cs.meta
+    - Assets/Ai Town/justaJump.cs
+    - Assets/Ai Town/justaJump.cs.meta
+    - Assets/Art.meta
+    - Assets/Art/NavMat.mat
+    - Assets/Art/NavMat.mat.meta
+    - Assets/Art/Normal Man.meta
+    - Assets/Art/Normal Man/Black Base Hair.png
+    - Assets/Art/Normal Man/Black Base Hair.png.meta
+    - Assets/Art/Normal Man/Head.png
+    - Assets/Art/Normal Man/Head.png.meta
+    - Assets/Art/Normal Man/Left Arm [DN].png
+    - Assets/Art/Normal Man/Left Arm [DN].png.meta
+    - Assets/Art/Normal Man/Left Eye.png
+    - Assets/Art/Normal Man/Left Eye.png.meta
+    - Assets/Art/Normal Man/Left Foot.png
+    - Assets/Art/Normal Man/Left Foot.png.meta
+    - Assets/Art/Normal Man/Left Hand [DN].png
+    - Assets/Art/Normal Man/Left Hand [DN].png.meta
+    - Assets/Art/Normal Man/Left Leg.png
+    - Assets/Art/Normal Man/Left Leg.png.meta
+    - Assets/Art/Normal Man/Right Arm [DN].png
+    - Assets/Art/Normal Man/Right Arm [DN].png.meta
+    - Assets/Art/Normal Man/Right Eye.png
+    - Assets/Art/Normal Man/Right Eye.png.meta
+    - Assets/Art/Normal Man/Right Foot.png
+    - Assets/Art/Normal Man/Right Foot.png.meta
+    - Assets/Art/Normal Man/Right Hand [DN].png
+    - Assets/Art/Normal Man/Right Hand [DN].png.meta
+    - Assets/Art/Normal Man/Right Leg.png
+    - Assets/Art/Normal Man/Right Leg.png.meta
+    - Assets/Art/Normal Man/Torso.png
+    - Assets/Art/Normal Man/Torso.png.meta
+    - Assets/Art/WallMat.mat
+    - Assets/Art/WallMat.mat.meta
+    - Assets/Scenes.meta
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scenes/SampleScene.unity.meta
     - 
-    m_Values: 01
+    m_Values: 01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
